@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170528 00:16:29.030" generator="Robot 3.0.2 (Python 2.7.4 on win32)">
+<suite source="C:\Users\kartseka\workspace\MX300 Demo" id="s1" name="MX300 Demo">
+<suite source="C:\Users\kartseka\workspace\MX300 Demo\features" id="s1-s1" name="Features">
+<suite source="C:\Users\kartseka\workspace\MX300 Demo\features\Login and logout" id="s1-s1-s1" name="Login and logout">
+<suite source="C:\Users\kartseka\workspace\MX300 Demo\features\Login and logout\Login.robot" id="s1-s1-s1-s1" name="Login">
+<kw type="setup" name="open endpoint IP in firefox along with credentials and login" library="Testdata">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${Webpage}</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170528 00:16:29.669" level="INFO">Opening browser 'ff' to base url 'http://10.78.239.95/web/signin'</msg>
+<status status="PASS" endtime="20170528 00:16:45.553" starttime="20170528 00:16:29.667"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:16:45.569" starttime="20170528 00:16:45.554"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Username}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170528 00:16:45.571" level="INFO">Typing text 'admin' into text field 'xpath=.//*[@id='username']'</msg>
+<status status="PASS" endtime="20170528 00:16:45.771" starttime="20170528 00:16:45.570"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:16:45.784" starttime="20170528 00:16:45.772"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<msg timestamp="20170528 00:16:45.786" level="INFO">Clicking button 'xpath=.//*[@id='root']/div/div/div/form/div[2]/button'.</msg>
+<status status="PASS" endtime="20170528 00:16:45.915" starttime="20170528 00:16:45.785"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20170528 00:16:55.916" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20170528 00:16:55.917" starttime="20170528 00:16:45.916"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:16:55.918" starttime="20170528 00:16:29.666"></status>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Endpoint Details">
+<kw name="status details" library="Testdata">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${Status}</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20170528 00:16:55.979" level="INFO">${a} = Registered</msg>
+<status status="PASS" endtime="20170528 00:16:55.979" starttime="20170528 00:16:55.922"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<msg timestamp="20170528 00:16:55.980" level="INFO">Registered</msg>
+<status status="PASS" endtime="20170528 00:16:55.981" starttime="20170528 00:16:55.980"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:16:55.981" starttime="20170528 00:16:55.921"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:16:55.982" critical="yes" starttime="20170528 00:16:55.919"></status>
+</test>
+<kw type="teardown" name="logout and close Browser" library="Testdata">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Admin}</arg>
+</arguments>
+<msg timestamp="20170528 00:16:55.984" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-admin']/a'.</msg>
+<status status="PASS" endtime="20170528 00:16:56.044" starttime="20170528 00:16:55.983"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:16:56.052" starttime="20170528 00:16:56.045"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Logout}</arg>
+</arguments>
+<msg timestamp="20170528 00:16:56.053" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-signin-signout']/a'.</msg>
+<status status="PASS" endtime="20170528 00:16:56.124" starttime="20170528 00:16:56.052"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:17:01.125" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:17:01.126" starttime="20170528 00:16:56.125"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170528 00:17:01.632" starttime="20170528 00:17:01.127"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:17:01.633" starttime="20170528 00:16:55.983"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:17:01.634" starttime="20170528 00:16:29.160"></status>
+</suite>
+<status status="PASS" endtime="20170528 00:17:01.637" starttime="20170528 00:16:29.157"></status>
+</suite>
+<suite source="C:\Users\kartseka\workspace\MX300 Demo\features\Personalization" id="s1-s1-s2" name="Personalization">
+<suite source="C:\Users\kartseka\workspace\MX300 Demo\features\Personalization\ringtone.robot" id="s1-s1-s2-s1" name="Ringtone">
+<test id="s1-s1-s2-s1-t1" name="Change Ringtone to Ascent">
+<kw type="setup" name="open endpoint IP in firefox along with credentials and login" library="Testdata">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${Webpage}</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170528 00:17:01.691" level="INFO">Opening browser 'ff' to base url 'http://10.78.239.95/web/signin'</msg>
+<status status="PASS" endtime="20170528 00:17:19.557" starttime="20170528 00:17:01.690"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:17:19.568" starttime="20170528 00:17:19.558"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Username}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170528 00:17:19.570" level="INFO">Typing text 'admin' into text field 'xpath=.//*[@id='username']'</msg>
+<status status="PASS" endtime="20170528 00:17:19.769" starttime="20170528 00:17:19.569"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:17:19.782" starttime="20170528 00:17:19.769"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<msg timestamp="20170528 00:17:19.784" level="INFO">Clicking button 'xpath=.//*[@id='root']/div/div/div/form/div[2]/button'.</msg>
+<status status="PASS" endtime="20170528 00:17:19.874" starttime="20170528 00:17:19.783"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20170528 00:17:29.875" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20170528 00:17:29.876" starttime="20170528 00:17:19.875"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:17:29.878" starttime="20170528 00:17:01.685"></status>
+</kw>
+<kw name="Open Setup" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:17:29.896" starttime="20170528 00:17:29.881"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${SetUp}</arg>
+</arguments>
+<msg timestamp="20170528 00:17:29.899" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-setup']/a'.</msg>
+<status status="PASS" endtime="20170528 00:17:29.979" starttime="20170528 00:17:29.897"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:17:29.979" starttime="20170528 00:17:29.879"></status>
+</kw>
+<kw name="Open Personalization" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:17:29.986" starttime="20170528 00:17:29.980"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Personalization}</arg>
+</arguments>
+<msg timestamp="20170528 00:17:29.987" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-personalization']/a'.</msg>
+<status status="PASS" endtime="20170528 00:17:30.055" starttime="20170528 00:17:29.986"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:17:30.056" starttime="20170528 00:17:29.980"></status>
+</kw>
+<kw name="change ringtone to Ascent" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:17:30.065" starttime="20170528 00:17:30.057"></status>
+</kw>
+<kw name="Select From List" library="Selenium2Library">
+<doc>Selects `*items` from list identified by `locator`</doc>
+<arguments>
+<arg>${ringtone}</arg>
+<arg>Ascent</arg>
+</arguments>
+<msg timestamp="20170528 00:17:30.066" level="INFO">Selecting option(s) 'Ascent' from list 'xpath=.//*[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[1]/select'.</msg>
+<status status="PASS" endtime="20170528 00:17:31.939" starttime="20170528 00:17:30.065"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20</arg>
+</arguments>
+<msg timestamp="20170528 00:17:51.941" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" endtime="20170528 00:17:51.942" starttime="20170528 00:17:31.940"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:17:51.943" starttime="20170528 00:17:30.056"></status>
+</kw>
+<kw name="save the changes" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:17:51.960" starttime="20170528 00:17:51.946"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Save_the_ringtone}</arg>
+</arguments>
+<msg timestamp="20170528 00:17:51.963" level="INFO">Clicking button 'xpath=.//*[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[1]/span/button'.</msg>
+<status status="PASS" endtime="20170528 00:17:52.073" starttime="20170528 00:17:51.961"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:17:57.074" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:17:57.075" starttime="20170528 00:17:52.074"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:17:57.076" starttime="20170528 00:17:51.944"></status>
+</kw>
+<kw type="teardown" name="logout and close Browser" library="Testdata">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Admin}</arg>
+</arguments>
+<msg timestamp="20170528 00:17:57.080" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-admin']/a'.</msg>
+<status status="PASS" endtime="20170528 00:17:57.159" starttime="20170528 00:17:57.079"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:17:57.165" starttime="20170528 00:17:57.159"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Logout}</arg>
+</arguments>
+<msg timestamp="20170528 00:17:57.166" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-signin-signout']/a'.</msg>
+<status status="PASS" endtime="20170528 00:17:57.224" starttime="20170528 00:17:57.166"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:18:02.225" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:18:02.226" starttime="20170528 00:17:57.225"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170528 00:18:02.606" starttime="20170528 00:18:02.227"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:18:02.607" starttime="20170528 00:17:57.078"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:18:02.607" critical="yes" starttime="20170528 00:17:01.681"></status>
+</test>
+<test id="s1-s1-s2-s1-t2" name="Change Ringtone to Calculation">
+<kw type="setup" name="open endpoint IP in firefox along with credentials and login" library="Testdata">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${Webpage}</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170528 00:18:02.613" level="INFO">Opening browser 'ff' to base url 'http://10.78.239.95/web/signin'</msg>
+<status status="PASS" endtime="20170528 00:18:18.562" starttime="20170528 00:18:02.612"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:18:18.583" starttime="20170528 00:18:18.563"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Username}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170528 00:18:18.585" level="INFO">Typing text 'admin' into text field 'xpath=.//*[@id='username']'</msg>
+<status status="PASS" endtime="20170528 00:18:18.795" starttime="20170528 00:18:18.584"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:18:18.809" starttime="20170528 00:18:18.796"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<msg timestamp="20170528 00:18:18.811" level="INFO">Clicking button 'xpath=.//*[@id='root']/div/div/div/form/div[2]/button'.</msg>
+<status status="PASS" endtime="20170528 00:18:18.936" starttime="20170528 00:18:18.810"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20170528 00:18:28.938" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20170528 00:18:28.939" starttime="20170528 00:18:18.937"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:18:28.941" starttime="20170528 00:18:02.611"></status>
+</kw>
+<kw name="Open Setup" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:18:28.967" starttime="20170528 00:18:28.945"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${SetUp}</arg>
+</arguments>
+<msg timestamp="20170528 00:18:28.970" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-setup']/a'.</msg>
+<status status="PASS" endtime="20170528 00:18:29.064" starttime="20170528 00:18:28.968"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:18:29.065" starttime="20170528 00:18:28.942"></status>
+</kw>
+<kw name="Open Personalization" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:18:29.071" starttime="20170528 00:18:29.066"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Personalization}</arg>
+</arguments>
+<msg timestamp="20170528 00:18:29.072" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-personalization']/a'.</msg>
+<status status="PASS" endtime="20170528 00:18:29.140" starttime="20170528 00:18:29.072"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:18:29.140" starttime="20170528 00:18:29.065"></status>
+</kw>
+<kw name="change ringtone to Calculation" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:18:29.151" starttime="20170528 00:18:29.142"></status>
+</kw>
+<kw name="Select From List" library="Selenium2Library">
+<doc>Selects `*items` from list identified by `locator`</doc>
+<arguments>
+<arg>${ringtone}</arg>
+<arg>Calculation</arg>
+</arguments>
+<msg timestamp="20170528 00:18:29.152" level="INFO">Selecting option(s) 'Calculation' from list 'xpath=.//*[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[1]/select'.</msg>
+<status status="PASS" endtime="20170528 00:18:31.283" starttime="20170528 00:18:29.152"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20</arg>
+</arguments>
+<msg timestamp="20170528 00:18:51.285" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" endtime="20170528 00:18:51.286" starttime="20170528 00:18:31.284"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:18:51.287" starttime="20170528 00:18:29.141"></status>
+</kw>
+<kw name="save the changes" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:18:51.305" starttime="20170528 00:18:51.290"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Save_the_ringtone}</arg>
+</arguments>
+<msg timestamp="20170528 00:18:51.308" level="INFO">Clicking button 'xpath=.//*[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[1]/span/button'.</msg>
+<status status="PASS" endtime="20170528 00:18:51.442" starttime="20170528 00:18:51.306"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:18:56.443" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:18:56.443" starttime="20170528 00:18:51.443"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:18:56.444" starttime="20170528 00:18:51.288"></status>
+</kw>
+<kw type="teardown" name="logout and close Browser" library="Testdata">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Admin}</arg>
+</arguments>
+<msg timestamp="20170528 00:18:56.447" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-admin']/a'.</msg>
+<status status="PASS" endtime="20170528 00:18:56.517" starttime="20170528 00:18:56.446"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:18:56.522" starttime="20170528 00:18:56.517"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Logout}</arg>
+</arguments>
+<msg timestamp="20170528 00:18:56.523" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-signin-signout']/a'.</msg>
+<status status="PASS" endtime="20170528 00:18:56.589" starttime="20170528 00:18:56.523"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:19:01.590" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:19:01.591" starttime="20170528 00:18:56.590"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170528 00:19:02.092" starttime="20170528 00:19:01.593"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:02.093" starttime="20170528 00:18:56.445"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:02.094" critical="yes" starttime="20170528 00:18:02.609"></status>
+</test>
+<status status="PASS" endtime="20170528 00:19:02.097" starttime="20170528 00:17:01.645"></status>
+</suite>
+<suite source="C:\Users\kartseka\workspace\MX300 Demo\features\Personalization\wallpaper.robot" id="s1-s1-s2-s2" name="Wallpaper">
+<test id="s1-s1-s2-s2-t1" name="Change wallpaper to Auto">
+<kw type="setup" name="open endpoint IP in firefox along with credentials and login" library="Testdata">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${Webpage}</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170528 00:19:02.142" level="INFO">Opening browser 'ff' to base url 'http://10.78.239.95/web/signin'</msg>
+<status status="PASS" endtime="20170528 00:19:17.016" starttime="20170528 00:19:02.141"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:17.030" starttime="20170528 00:19:17.017"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Username}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:17.032" level="INFO">Typing text 'admin' into text field 'xpath=.//*[@id='username']'</msg>
+<status status="PASS" endtime="20170528 00:19:17.239" starttime="20170528 00:19:17.031"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:17.252" starttime="20170528 00:19:17.240"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:17.254" level="INFO">Clicking button 'xpath=.//*[@id='root']/div/div/div/form/div[2]/button'.</msg>
+<status status="PASS" endtime="20170528 00:19:17.373" starttime="20170528 00:19:17.252"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20170528 00:19:27.375" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20170528 00:19:27.375" starttime="20170528 00:19:17.374"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:27.376" starttime="20170528 00:19:02.140"></status>
+</kw>
+<kw name="Open Setup" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:27.388" starttime="20170528 00:19:27.379"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${SetUp}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:27.390" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-setup']/a'.</msg>
+<status status="PASS" endtime="20170528 00:19:27.498" starttime="20170528 00:19:27.389"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:27.499" starttime="20170528 00:19:27.377"></status>
+</kw>
+<kw name="Open Personalization" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:27.510" starttime="20170528 00:19:27.501"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Personalization}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:27.511" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-personalization']/a'.</msg>
+<status status="PASS" endtime="20170528 00:19:27.627" starttime="20170528 00:19:27.511"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:27.628" starttime="20170528 00:19:27.500"></status>
+</kw>
+<kw name="Select Auto" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:27.638" starttime="20170528 00:19:27.630"></status>
+</kw>
+<kw name="Click Image" library="Selenium2Library">
+<doc>Clicks an image found by `locator`.</doc>
+<arguments>
+<arg>${Autoimage}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:27.640" level="INFO">Clicking image 'xpath=.//*[@id='root']/div/div[3]/div/div/div[1]/div/ul/li[2]/a/img'.</msg>
+<status status="PASS" endtime="20170528 00:19:29.278" starttime="20170528 00:19:27.639"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:19:34.286" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:19:34.289" starttime="20170528 00:19:29.279"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:34.290" starttime="20170528 00:19:27.629"></status>
+</kw>
+<kw type="teardown" name="logout and close Browser" library="Testdata">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Admin}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:34.294" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-admin']/a'.</msg>
+<status status="PASS" endtime="20170528 00:19:34.446" starttime="20170528 00:19:34.293"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:34.456" starttime="20170528 00:19:34.447"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Logout}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:34.458" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-signin-signout']/a'.</msg>
+<status status="PASS" endtime="20170528 00:19:34.633" starttime="20170528 00:19:34.457"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:19:39.646" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:19:39.646" starttime="20170528 00:19:34.634"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170528 00:19:40.164" starttime="20170528 00:19:39.647"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:40.164" starttime="20170528 00:19:34.292"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:19:40.165" critical="yes" starttime="20170528 00:19:02.137"></status>
+</test>
+<test id="s1-s1-s2-s2-t2" name="Change Volume">
+<kw type="setup" name="open endpoint IP in firefox along with credentials and login" library="Testdata">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${Webpage}</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170528 00:19:40.170" level="INFO">Opening browser 'ff' to base url 'http://10.78.239.95/web/signin'</msg>
+<status status="PASS" endtime="20170528 00:19:56.630" starttime="20170528 00:19:40.169"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:56.652" starttime="20170528 00:19:56.631"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Username}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:56.654" level="INFO">Typing text 'admin' into text field 'xpath=.//*[@id='username']'</msg>
+<status status="PASS" endtime="20170528 00:19:56.839" starttime="20170528 00:19:56.653"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:19:56.851" starttime="20170528 00:19:56.840"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<msg timestamp="20170528 00:19:56.853" level="INFO">Clicking button 'xpath=.//*[@id='root']/div/div/div/form/div[2]/button'.</msg>
+<status status="PASS" endtime="20170528 00:19:56.981" starttime="20170528 00:19:56.852"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20170528 00:20:06.982" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20170528 00:20:06.982" starttime="20170528 00:19:56.981"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:20:06.983" starttime="20170528 00:19:40.168"></status>
+</kw>
+<kw name="Open Setup" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:20:06.995" starttime="20170528 00:20:06.985"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${SetUp}</arg>
+</arguments>
+<msg timestamp="20170528 00:20:06.996" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-setup']/a'.</msg>
+<status status="PASS" endtime="20170528 00:20:07.140" starttime="20170528 00:20:06.995"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:20:07.141" starttime="20170528 00:20:06.984"></status>
+</kw>
+<kw name="Open Personalization" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:20:07.151" starttime="20170528 00:20:07.143"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Personalization}</arg>
+</arguments>
+<msg timestamp="20170528 00:20:07.152" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-personalization']/a'.</msg>
+<status status="PASS" endtime="20170528 00:20:07.244" starttime="20170528 00:20:07.151"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:20:07.245" starttime="20170528 00:20:07.141"></status>
+</kw>
+<kw name="Change the volume" library="Testdata">
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:20:07.254" starttime="20170528 00:20:07.247"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by `locator`.</doc>
+<arguments>
+<arg>${Volume}</arg>
+</arguments>
+<msg timestamp="20170528 00:20:07.256" level="INFO">Double clicking element 'xpath=.//*[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div'.</msg>
+<status status="PASS" endtime="20170528 00:20:09.554" starttime="20170528 00:20:07.255"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:20:14.556" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:20:14.556" starttime="20170528 00:20:09.555"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:20:14.557" starttime="20170528 00:20:07.246"></status>
+</kw>
+<kw type="teardown" name="logout and close Browser" library="Testdata">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Admin}</arg>
+</arguments>
+<msg timestamp="20170528 00:20:14.559" level="INFO">Clicking link 'xpath=.//*[@id='menu-toplevel-admin']/a'.</msg>
+<status status="PASS" endtime="20170528 00:20:14.704" starttime="20170528 00:20:14.559"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>55</arg>
+</arguments>
+<status status="PASS" endtime="20170528 00:20:14.713" starttime="20170528 00:20:14.705"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${Logout}</arg>
+</arguments>
+<msg timestamp="20170528 00:20:14.715" level="INFO">Clicking link 'xpath=.//*[@id='menu-item-signin-signout']/a'.</msg>
+<status status="PASS" endtime="20170528 00:20:14.824" starttime="20170528 00:20:14.714"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170528 00:20:19.826" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170528 00:20:19.826" starttime="20170528 00:20:14.825"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170528 00:20:20.230" starttime="20170528 00:20:19.827"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:20:20.231" starttime="20170528 00:20:14.558"></status>
+</kw>
+<status status="PASS" endtime="20170528 00:20:20.232" critical="yes" starttime="20170528 00:19:40.167"></status>
+</test>
+<status status="PASS" endtime="20170528 00:20:20.234" starttime="20170528 00:19:02.104"></status>
+</suite>
+<status status="PASS" endtime="20170528 00:20:20.242" starttime="20170528 00:17:01.640"></status>
+</suite>
+<status status="PASS" endtime="20170528 00:20:20.249" starttime="20170528 00:16:29.152"></status>
+</suite>
+<status status="PASS" endtime="20170528 00:20:20.258" starttime="20170528 00:16:29.107"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="MX300 Demo" pass="5">MX300 Demo</stat>
+<stat fail="0" id="s1-s1" name="Features" pass="5">MX300 Demo.Features</stat>
+<stat fail="0" id="s1-s1-s1" name="Login and logout" pass="1">MX300 Demo.Features.Login and logout</stat>
+<stat fail="0" id="s1-s1-s1-s1" name="Login" pass="1">MX300 Demo.Features.Login and logout.Login</stat>
+<stat fail="0" id="s1-s1-s2" name="Personalization" pass="4">MX300 Demo.Features.Personalization</stat>
+<stat fail="0" id="s1-s1-s2-s1" name="Ringtone" pass="2">MX300 Demo.Features.Personalization.Ringtone</stat>
+<stat fail="0" id="s1-s1-s2-s2" name="Wallpaper" pass="2">MX300 Demo.Features.Personalization.Wallpaper</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
